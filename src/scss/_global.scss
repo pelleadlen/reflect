@@ -1,0 +1,36 @@
+@use "./colors";
+@use "./typography";
+
+$rounded-full: 999px;
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Inter, sans-serif;
+  font-size: typography.$text;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  color: colors.$black;
+  background: colors.$gray;
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  position: relative;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+}

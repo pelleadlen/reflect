@@ -1,0 +1,57 @@
+@use "../../scss/colors";
+@use "../../scss/typography";
+@use "../../scss/global";
+
+.time-selector-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  width: fit-content;
+  padding: 8px 12px;
+  background-color: colors.$white;
+  border-radius: global.$rounded-full;
+
+  label {
+    font-size: typography.$text-sm;
+  }
+
+  button {
+    background-color: colors.$darkGray;
+    border: none;
+    cursor: pointer;
+    font-size: typography.$text-xs;
+    line-height: 1rem;
+    padding: 2px 12px;
+    border-radius: global.$rounded-full;
+
+    &:focus {
+      outline: 1px solid colors.$blue;
+    }
+  }
+}
+
+input[type="radio"] {
+  appearance: none;
+  margin: 0;
+  font: inherit;
+  color: colors.$black;
+  width: 0.75em;
+  height: 0.75em;
+  border: 1px solid colors.$black;
+  border-radius: 50%;
+  margin-right: 0.5em;
+}
+
+input[type="radio"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  background-color: colors.$green;
+}
+input[type="radio"]:checked::before {
+  transform: scale(1);
+}
