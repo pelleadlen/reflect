@@ -1,7 +1,7 @@
 import * as RadioGroup from "@radix-ui/react-radio-group";
-import "./modeSelector";
+import "./radioButton.scss";
 
-export const RadioButtons = () => {
+export const RadioButton = (props) => {
   return (
     <>
       <form>
@@ -12,7 +12,7 @@ export const RadioButtons = () => {
                 <RadioGroup.Indicator className="radio-group-indicator" />
               </RadioGroup.Item>
 
-              <label>Focus</label>
+              <label>{props.label}</label>
             </div>
             <button className="tools">?</button>
           </div>
