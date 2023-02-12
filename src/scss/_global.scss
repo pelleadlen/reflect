@@ -3,6 +3,11 @@
 
 $rounded-full: 999px;
 
+@font-face {
+  font-family: Diatype;
+  src: url("../assets/Diatype.woff2");
+}
+
 *,
 *:before,
 *:after {
@@ -10,7 +15,7 @@ $rounded-full: 999px;
 }
 
 :root {
-  font-family: Inter, sans-serif;
+  font-family: Diatype, Inter, sans-serif;
   font-size: typography.$text;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -21,7 +26,7 @@ $rounded-full: 999px;
 
 body {
   color: colors.$black;
-  background: colors.$gray;
+  background: colors.$white;
   margin: 0;
   min-width: 320px;
   min-height: 100vh;

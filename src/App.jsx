@@ -1,12 +1,12 @@
 import { Header } from "./components/header/Header";
-import { ModeSelector } from "./components/mode/modeSelector";
-
+import { Timer } from "./components/timer/timer";
+import "./scss/_global.scss";
 
 function App() {
   return (
     <div className="App">
       <Header />
-<ModeSelector />
+      <Timer />
     </div>
   );
 }

@@ -1,0 +1,17 @@
+@use "../../scss/colors";
+@use "../../scss/global";
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 80%;
+  min-width: 50%;
+  padding: 2em;
+  border-radius: 48px;
+  background-color: colors.$gray;
+  h1 {
+    font-size: 8.75em;
+    font-weight: 300;
+  }
+}

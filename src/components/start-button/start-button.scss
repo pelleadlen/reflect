@@ -1,0 +1,24 @@
+@use "../../scss/typography";
+@use "../../scss/colors";
+@use "../../scss/global";
+
+.start-btn {
+  font-size: typography.$btn-normal;
+  line-height: 1;
+  padding: 0.75rem 1.5rem;
+  background-color: colors.$white;
+  border-radius: global.$rounded-full;
+  display: flex;
+  gap: 3em;
+
+  .start-indicator {
+    background-color: colors.$blue;
+    height: 1em;
+    width: 1em;
+    border-radius: global.$rounded-full;
+  }
+
+  .start-indicator-active {
+    background-color: colors.$red;
+  }
+}
