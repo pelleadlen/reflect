@@ -26,7 +26,9 @@ export const RadioGroup = ({ onValueChange }) => {
               >
                 <Radio.Indicator className="radio-group-indicator" />
               </Radio.Item>
-              <label htmlFor={timer.id}>{timer.title}</label>
+              <label className="label" htmlFor={timer.id}>
+                {timer.title}
+              </label>
             </div>
             <button className="tools">?</button>
           </div>

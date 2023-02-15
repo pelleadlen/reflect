@@ -2,6 +2,7 @@
 @use "./typography";
 
 $rounded-full: 999px;
+$breakpoint-small: 570px;
 
 @font-face {
   font-family: Diatype;
@@ -33,9 +34,23 @@ body {
   position: relative;
 }
 
+//Section
 .App {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100dvh;
+  padding: 1.25em;
+  overflow: hidden;
+
+  @media (max-width: $breakpoint-small) {
+    padding: 1rem;
+  }
+}
+
+//Container
+
+.container {
+  max-width: 1400px;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  margin: auto;
 }

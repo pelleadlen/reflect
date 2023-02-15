@@ -2,23 +2,24 @@
 @use "../../scss/colors";
 @use "../../scss/global";
 
-.start-btn {
+.play__btn {
   font-size: typography.$btn-normal;
   line-height: 1;
-  padding: 0.75rem 1.5rem;
+  padding: 0.5em 1em;
   background-color: colors.$white;
   border-radius: global.$rounded-full;
   display: flex;
   gap: 3em;
+  cursor: pointer;
 
-  .start-indicator {
+  &--indicator {
     background-color: colors.$blue;
     height: 1em;
     width: 1em;
     border-radius: global.$rounded-full;
   }
 
-  .start-indicator-active {
+  &--active {
     background-color: colors.$red;
   }
 }

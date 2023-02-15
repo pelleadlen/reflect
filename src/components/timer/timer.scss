@@ -1,17 +1,31 @@
 @use "../../scss/colors";
 @use "../../scss/global";
-.container {
+.timer {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  min-height: 80%;
-  min-width: 50%;
-  padding: 2em;
   border-radius: 48px;
+  height: 80dvh;
+  width: 100%;
+  max-width: 800px;
+  padding: 2em;
   background-color: colors.$gray;
-  h1 {
-    font-size: 8.75em;
-    font-weight: 300;
+
+  &__time {
+    display: grid;
+    place-items: center;
+  }
+  &__title {
+    font-size: clamp(6rem, 20vw, 8.75em);
+    font-weight: 400;
+    margin: 0;
+  }
+
+  @media (max-width: global.$breakpoint-small) {
+    padding: 3rem 0.5rem;
+    height: 85dvh;
+    border-radius: 1.5rem;
+    flex-direction: column;
   }
 }

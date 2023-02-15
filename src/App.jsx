@@ -6,7 +6,9 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Timer />
+      <div className="container">
+        <Timer />
+      </div>
     </div>
   );
 }

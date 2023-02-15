@@ -1,14 +1,14 @@
-import { useState } from "react";
 import "./start-button.scss";
 
 export const StartButton = (props) => {
-  const [isActive, setIsActive] = useState(false);
+  const { onStartStop, isActive } = props;
+
   return (
-    <button onClick={() => setIsActive(!isActive)} className="start-btn">
+    <button onClick={onStartStop} className="play__btn">
       {isActive ? "Stop" : "Start"}
       <div
-        className={`start-indicator ${
-          isActive ? "start-indicator-active" : ""
+        className={`play__btn--indicator ${
+          isActive ? "play__btn--active" : ""
         }`}
       />
     </button>
