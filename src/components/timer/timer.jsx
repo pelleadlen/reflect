@@ -2,6 +2,8 @@ import "./timer.scss";
 import { useEffect, useState } from "react";
 import { RadioGroup } from "../radio-group/radioGroup";
 import { StartButton } from "../start-button/startButton";
+import { ReloadIcon } from "@radix-ui/react-icons";
+import toast, { Toaster } from "react-hot-toast";
 
 export const Timer = () => {
   //UseState
@@ -73,7 +75,10 @@ export const Timer = () => {
           {timerMinutes}:{timerSeconds}
         </h1>
         {!isActive && seconds !== 0 && (
-          <button onClick={handleReset}>reset</button>
+          <button className="timer__button--reset" onClick={handleReset}>
+            <ReloadIcon />
+            reset
+          </button>
         )}
       </div>
       <StartButton isActive={isActive} onStartStop={handleStart} />

@@ -1,0 +1,25 @@
+@use "../../scss/colors";
+@use "../../scss/global";
+@use "../../scss/typography";
+
+.trigger {
+  background-color: colors.$darkGray;
+  padding: 0.25em 1em;
+  border-radius: global.$rounded-full;
+  font-size: typography.$text-xs;
+
+  &:hover {
+    box-shadow: 0px 0px 0px 1px colors.$blue inset;
+  }
+}
+
+.content {
+  border-radius: 4px;
+  padding: 20px;
+  width: 260px;
+  background-color: white;
+}
+
+.arrow {
+  fill: white;
+}

@@ -1,6 +1,7 @@
 import * as Radio from "@radix-ui/react-radio-group";
 import "./radio-group.scss";
 import { useState } from "react";
+import { PopOver } from "../pop-over/popOver";
 
 const mode = [
   { id: "t1", title: "Focus" },
@@ -30,7 +31,7 @@ export const RadioGroup = ({ onValueChange }) => {
                 {timer.title}
               </label>
             </div>
-            <button className="tools">?</button>
+            <PopOver />
           </div>
         ))}
       </Radio.Root>

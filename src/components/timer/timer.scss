@@ -22,10 +22,22 @@
     margin: 0;
   }
 
+  &__button--reset {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
   @media (max-width: global.$breakpoint-small) {
     padding: 3rem 0.5rem;
     height: 85dvh;
     border-radius: 1.5rem;
     flex-direction: column;
   }
+}
+
+.toast-container.toaster {
+  background-color: #fab;
+  color: green;
+  padding: 10px;
 }
